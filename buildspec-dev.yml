@@ -28,10 +28,10 @@ phases:
     commands:
     # Project-1: AWS VPC, ASG, ALB, Route53, ACM, Security Groups and SNS 
       - cd "simplewebserver"
-      - aws-vault-windows-386 exec rushi -- terraform init
-      - aws-vault-windows-386 exec rushi -- terraform validate
-      - aws-vault-windows-386 exec rushi -- terraform plan        
-      - aws-vault-windows-386 exec rushi -- terraform $TF_COMMAND 
+      - terraform init
+      - terraform validate
+      - terraform plan        
+      - terraform $TF_COMMAND 
   post_build:
     on-failure: CONTINUE   
     commands:
