@@ -27,9 +27,7 @@ phases:
     on-failure: ABORT   
     commands:
     # Project-1: AWS VPC, ASG, ALB, Route53, ACM, Security Groups and SNS 
-      - cd "$CODEBUILD_SRC_DIR/terraform-manifests"
-      - ls -lrt "$CODEBUILD_SRC_DIR/terraform-manifests"
-      - terraform --version
+      - cd "/simplewebserver"
       - terraform init 
       - terraform validate
       - terraform plan        
